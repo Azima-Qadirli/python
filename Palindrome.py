@@ -9,3 +9,17 @@ class Solution:
             arr.append(head.val)
             head = head.next
         return arr and arr == arr[::-1]
+         #or
+         slow = fast = head
+        arr = []
+        while fast and fast.next:
+            arr.append(slow.val)
+            slow=slow.next
+            fast=fast.next.next
+        if fast:
+            slow=slow.next
+        while slow:
+            if arr.pop() != slow.val:
+                return False
+            slow=slow.next
+        return True
