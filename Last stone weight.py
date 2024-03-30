@@ -1,5 +1,5 @@
 class Solution:
-    def lastStoneWeight(self, stones: int) -> int:
+    def lastStoneWeight(self, stones:int) -> int:
         while len(stones) > 1:
             stones.sort()
             y = stones.pop()  # Remove the heaviest stone
